@@ -1,0 +1,75 @@
+.single-wrapper {
+    margin:0 10%;
+}
+
+.single .box {
+    margin-bottom: 10%;
+}
+
+.single .row {
+    margin: .8em 0;
+}
+
+.store-details {
+    font-size: 1.2em;
+}
+
+.single-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    margin: 1em 0 0;
+    padding: 1em;
+}
+
+.single .number {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 700;
+    color: #fb3fa3;
+    padding: 0 5px 0 0;
+}
+
+.row .title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: .3em;
+}
+
+.row .category {
+    color: #fb3fa3;
+    font-size: 1.4em;
+}
+
+.row .price {
+    font-size: 2em;
+    font-weight: 700;
+    margin: .7em 0 .3em 0;
+}
+
+.single .description {
+    opacity: .7;
+}
+
+@media screen and (min-width:800px) {
+
+    .single-wrapper {
+        margin: 0 10%;
+    }
+
+    .single {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .single .box {
+        margin: 0% 5%;
+        width: 50%;
+    }
+
+}

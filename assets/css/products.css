@@ -1,0 +1,167 @@
+/* products */
+.products-main {
+    margin-bottom: 2em;
+}
+
+.filters-btn {
+    position: absolute;
+    background: transparent;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: .4em;
+    font-size: 1em;
+    z-index: 99;
+    margin: .5em;
+}
+
+.filters-btn.active {
+    background-color: #fff;
+    color: #000;
+}
+
+.aside {
+    position: relative;
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    min-height: 500px;
+}
+
+.aside.active {
+    display: none;
+}
+
+.filter {
+    margin: 0 0 2em 0;
+}
+
+.list .item {
+    cursor: pointer;
+    margin-bottom: .2em;
+}
+
+.list .item.active {
+    color: #fb3fa3;
+    font-weight: 500;
+}
+
+.list .item:hover {
+    color: #af3174;
+}
+
+.aside h2,
+.aside h4{
+    font-family: 'Poltawski Nowy', serif;
+    text-transform: capitalize;
+}
+
+.aside input {
+    width: 100%;
+}
+
+.article {
+    width: 100%;
+    border: 2px solid #000;
+    padding: 3em 1em 1em;
+    z-index: 1;
+    min-height: 500px;
+}
+
+.products-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5em;
+}
+
+.products-wrapper .product {
+    min-height: 200px;
+    max-height: 250px;
+}
+
+.product a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+#priceRange {
+    background-color: transparent;
+    border: solid 2px #FFE3E1;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 10px;
+    outline: none;
+    -webkit-appearance: none;
+}
+  
+#priceRange::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #434343;
+}
+
+
+@media screen and (min-width:650px) {
+
+    .products-main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: .5em;
+    }
+
+    .aside {
+        width: 30%;
+        background-color: transparent;
+        color: #000;
+        position: relative;
+        left: 0;
+        top: 0;
+        text-align: left;
+        align-items: start;
+        justify-content: start;
+        transform: none;
+        z-index: 1;
+    }
+
+    .aside.active {
+        display: flex;
+    }
+
+    .article {
+        width: 70%;
+        padding: 1em;
+    }
+
+    .filters-btn {
+        display: none;
+    }
+}
+
+@media screen and (min-width:800px) {
+    
+    .aside {
+        width: 20%;
+    }
+
+    .article {
+        width: 80%;
+    }
+
+    .products-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+    }
+
+}

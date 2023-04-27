@@ -1,0 +1,400 @@
+@import url(/assets/css/products.css);
+@import url(/assets/css/single.css);
+@import url(/assets/css/contact.css);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s all ease-in-out;
+}
+
+body {
+    font-family: 'Poltawski Nowy', serif;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 700;
+    margin-bottom: .9em;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fb3fa3;
+    text-decoration: line-through;
+}
+
+input,
+textarea {
+    outline: none;
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+button svg {
+    pointer-events: none;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.topbar {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3em .5em;
+}
+
+.topbar a {
+    color: #fff;
+    font-size: .9em;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3% 0;
+    height: 150px;
+}
+
+.brand {
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8em;
+    text-transform: capitalize;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    border: 1px solid #333;
+    border-left: none;
+    min-width: max-content;
+    padding: .2em .5em;
+    cursor: pointer;
+}
+
+.nav-item:nth-child(1) {
+    border-left: 1px solid #333;
+}
+
+.nav-item:hover,
+.add-to-card-btn:hover,
+.carousel-btn:hover,
+.more-btn:hover,
+.social-btn:hover,
+.form button:hover,
+.single-btn:hover {
+    background-color: #FFE3E1;
+}
+
+.nav-item a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.main {
+    min-height: 73vh;
+    padding: 3% 4%;
+}
+
+.section {
+    margin-bottom: 10%;
+}
+
+.grid-album {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 8em);
+    gap: 5px;
+    width: 100%;
+    min-height: 50vh;
+}
+
+.album-item {
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.album-item .title {
+    font-size: 1.6em;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.album-item:hover {
+    transform: translateX(-3%);
+}
+
+.album-item:nth-child(1) { background-image: url(/assets/images/img-6.jpg); }
+.album-item:nth-child(2) { background-image: url(/assets/images/img-9.jpg); }
+.album-item:nth-child(3) { background-image: url(/assets/images/img-8.jpg); }
+.album-item:nth-child(4) { background-image: url(/assets/images/img-4.jpg); }
+.album-item:nth-child(5) { background-image: url(/assets/images/img-14.jpg); }
+
+.section-title {
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+.carousel-container {
+    /* border: 2px solid #333; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel {
+    display: flex;
+    max-height: 330px;
+    overflow: hidden;
+}
+
+.product-container {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    position: relative;
+    width: 1000px;
+    padding: .5em;
+    gap: 0 2%;
+    /* overflow-x: scroll; */
+    z-index: 9;
+}
+
+.carousel-btn,
+.social-btn,
+.single-btn {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #0000007b;
+    padding: .3em;
+    margin: 0 .5em;
+}
+
+.social-btn {
+    font-size: 1.2em;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #0000007b;
+    padding: 3%;
+    min-width: 200px;
+    min-height: 300px;
+    text-align: center;
+    box-shadow: 3px 3px 3px #9090902d;
+}
+
+.product img {
+    object-fit:contain;
+    width: 50%;
+    height: 100%;
+}
+
+.product .name {
+    font-family: 'Poltawski Nowy', serif;
+    font-weight: 700;
+    font-size: .9em;
+    margin: 8% 0 0 0;
+}
+
+.price {
+    font-family: 'Great Vibes', cursive;
+    margin: 3% 0;
+    font-size: .9em;
+}
+
+.add-to-card-btn,
+.more-btn {
+    width: 100%;
+    background-color: transparent;
+    padding: .5em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid #000;
+}
+
+.blog,
+.contact {
+    background: url(/assets/images/img-11.jpg) no-repeat center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.contact {
+    background: url(/assets/images/img-15.jpg) no-repeat;
+    background-position: 20% 50%;
+}
+
+.text-box {
+    width: 100%;
+    color: #fff;
+    border: dashed 1px #fff;
+    padding: 1em;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.text-box h3 {
+    font-size: 1.6em;
+    text-transform: capitalize;
+}
+
+.more-btn {
+    color: #fff;
+    border: 1px solid #fff;
+    margin-top: 1.5em;
+}
+
+.headline {
+    text-align: center;
+    font-size: 2em;
+    margin: 6% 0;
+    color: #fb3fa3;
+}
+
+.socials {
+    margin-top: 1em;
+}
+
+.address {
+    line-height: 1.5em;
+}
+
+.footer {
+    background-color: #000;
+    padding: 1em 0;
+    color: #fff;
+    font-size: .7em;
+    text-align: center;
+}
+
+
+@media screen and (min-width:650px) {
+    body {
+        font-size: 1em;
+    }
+
+    .nav-item a {
+        font-size: 1.2em;
+    }
+
+    .brand {
+        font-size: 2.5em;
+    }
+
+    .main {
+        padding: 0 5%;
+    }
+
+    .product-container {
+        gap: 1em;
+    }
+
+    .grid-album {
+        min-height: 70vh;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        grid-template-areas: 
+            " one one one one two two"
+            " one one one one two two"
+            " three three four four five five"
+            " three three four four five five"
+        ;
+    }
+    
+    .album-item:nth-child(1) { grid-area: one; }
+    .album-item:nth-child(2) { grid-area: two; }
+    .album-item:nth-child(3) { grid-area: three; }
+    .album-item:nth-child(4) { grid-area: four; }
+    .album-item:nth-child(5) { grid-area: five; }
+
+    .album-item:nth-child(1):hover { transform: translateX(-3%); }
+    .album-item:nth-child(2):hover { transform: translateX(3%); }
+    .album-item:nth-child(3):hover { transform: translateX(-3%); }
+    .album-item:nth-child(4):hover { transform: translateY(3%); }
+    .album-item:nth-child(5):hover { transform: translateX(3%); }
+        
+    .blog,
+    .contact {
+        min-height: 450px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .contact {
+        justify-content: flex-end;
+    }
+
+    .text-box {
+        width: 50vw;
+    }
+
+    .carousel-btn {
+        padding: .5em;
+    }
+
+    .headline {
+        font-size: 3em;
+        margin-bottom: 10%;
+    }
+
+}
+
+@media screen and (min-width:800px) {
+    .carousel-btn {
+        padding: 1.5em;
+    }
+
+    .text-box {
+        width: 40vw;
+    }
+}

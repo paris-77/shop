@@ -1,0 +1,47 @@
+.contact-form h1{
+    text-align: center;
+    text-transform: capitalize;
+    color: #fb3fa3;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.form label {
+    text-transform: capitalize;
+    color: #000;
+}
+
+.form input {
+    margin-bottom: 1em;
+}
+
+.form button {
+    margin-top: 2em;
+    height: 30px;
+    border: 1px solid #000;
+    background: transparent;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border: 1px solid #fb3fa3;
+}
+
+@media screen and (min-width:650px) {
+    .contact-form {
+        padding: 5% 10%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .contact-form {
+        padding: 5% 30%;
+    }
+}
